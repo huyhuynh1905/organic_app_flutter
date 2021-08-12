@@ -4,6 +4,7 @@ import 'package:organic_app_flutter/mywidget/background_image.dart';
 import 'package:organic_app_flutter/mywidget/red_text_button.dart';
 import 'package:organic_app_flutter/mywidget/text_input.dart';
 import 'package:organic_app_flutter/mywidget/text_input_pass.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({Key? key}) : super(key: key);
@@ -31,7 +32,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     SizedBox(height: size.height * 0.1,),
                     Center(
                       child: Text(
-                        "Đăng kí tài khoản",
+                        'textRegister'.tr(),
                         style: GoogleFonts.lobster(
                           color: Colors.white,
                           fontSize: 30
@@ -41,7 +42,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     SizedBox(height: size.height * 0.1,),
                     TextFieldEmail(
                       iconData: Icons.account_circle_rounded,
-                      hintText: "Tên người dùng",
+                      hintText: 'hintEdtName'.tr(),
                     ),
                     SizedBox(height: size.height * 0.02,),
                     TextFieldEmail(
@@ -51,24 +52,24 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     SizedBox(height: size.height * 0.02,),
                     TextFieldEmail(
                       iconData: Icons.home_outlined,
-                      hintText: "Địa chỉ",
+                      hintText: 'hintEdtAddr'.tr(),
                     ),
                     SizedBox(height: size.height * 0.02,),
                     TextFieldPassword(
                       iconData: Icons.lock_outline,
-                      hintText: "Mật khẩu",
+                      hintText: 'hintEdtPass'.tr(),
                     ),
                     SizedBox(height: size.height * 0.02,),
                     TextFieldPassword(
                       iconData: Icons.lock_outline,
-                      hintText: "Nhập lại mật khẩu",
+                      hintText: 'hintEdtRePass'.tr(),
                     ),
                     SizedBox(height: size.height *0.03,),
                     RedTextButton(
                       radius: 10,
                       widthButton: size.width/1.1,
                       heightButton: 60,
-                      tittle: "Đăng kí tài khoản",
+                      tittle: 'textRegister'.tr(),
                     ),
                     SizedBox(height: size.height *0.03,),
                     Container(
@@ -77,7 +78,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
-                            'Đã có tài khoản? ',
+                            'tvHaveAccount'.tr(),
                             style: GoogleFonts.mulish(
                               color: Colors.white,
                               fontSize: 16
@@ -89,7 +90,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                               Navigator.pop(context);
                             },
                             child: Text(
-                              'Đăng nhập',
+                              'textBtnLogin'.tr(),
                               style: GoogleFonts.mulish(
                                 color: Colors.red,
                                 fontSize: 16

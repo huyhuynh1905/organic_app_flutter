@@ -8,6 +8,9 @@ class MyAppColors {
   static final redColorSplash = Color(0xFFCB1616);
   static final yellowColorSplash = Color(0xFFFF851B);
 
+  static final grey57 = Color(0xFF575757);
+  static final greyB8 = Color(0x86B8B8B8);
+
   static final bgSplashScreen = LinearGradient(
     colors: [
       yellowColorSplash,

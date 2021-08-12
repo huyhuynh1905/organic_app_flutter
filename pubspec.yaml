@@ -19,6 +19,8 @@ dependencies:
   google_fonts: ^2.1.0
   json_annotation: ^4.0.0
   json_serializable: ^4.1.0
+  # Change language app
+  easy_localization: ^3.0.0
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -42,6 +44,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/
+    - assets/langs/
     - assets/images/loginbkg.png
 
   # An image asset can refer to one or more resolution-specific "variants", see

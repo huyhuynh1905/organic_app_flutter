@@ -1,5 +1,7 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:organic_app_flutter/const/string_constants.dart';
 
 class RedTextButton extends StatelessWidget {
   const RedTextButton({
