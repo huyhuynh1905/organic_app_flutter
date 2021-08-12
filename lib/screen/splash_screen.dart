@@ -20,7 +20,7 @@ class _SplashScreenState extends State<SplashScreen> {
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(statusBarColor: Colors.transparent));
     SystemChrome.setEnabledSystemUIOverlays([SystemUiOverlay.top]);
     super.initState();
-    Timer(Duration(seconds: 2),()=>Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => LoginScreen())));
+    Timer(Duration(seconds: 2),()=>Navigator.pushReplacementNamed(context, "/login"));
   }
   @override
   Widget build(BuildContext context) {

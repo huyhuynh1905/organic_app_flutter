@@ -34,7 +34,7 @@ class RedTextButton extends StatelessWidget {
             )
         ),
         onPressed: () {
-          print('Click button Login');
+          print('Click button $tittle');
         },
         child: Text(
           tittle,

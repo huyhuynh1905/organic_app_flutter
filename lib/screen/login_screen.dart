@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:organic_app_flutter/mywidget/background_image.dart';
 import 'package:organic_app_flutter/mywidget/red_text_button.dart';
 import 'package:organic_app_flutter/mywidget/text_input.dart';
 import 'package:organic_app_flutter/mywidget/text_input_pass.dart';
@@ -21,26 +22,7 @@ class _LoginScreenState extends State<LoginScreen> {
         height: double.infinity,
         child: Stack(
           children: [
-            ShaderMask(
-              shaderCallback: (rect) => LinearGradient(
-                begin: Alignment.bottomCenter,
-                end: Alignment.center,
-                colors: [
-                  Colors.black87,
-                  Colors.transparent
-                ]
-              ).createShader(rect),
-              blendMode: BlendMode.darken,
-              child: Container(
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage("assets/images/loginbkg.png"),
-                    fit: BoxFit.cover,
-                    colorFilter: ColorFilter.mode(Colors.black54, BlendMode.darken)
-                  )
-                ),
-              ),
-            ),
+            BackgroundWidget(pathImage: "assets/images/loginbkg.png",),
             Scaffold(
               backgroundColor: Colors.transparent,
               body: Column(
@@ -63,7 +45,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                   SizedBox(height: 20,),
                   TextFieldPassword(
-                    hintText: "Email",
+                    hintText: "Mật khẩu",
                     iconData: Icons.lock,
                   ),
                   SizedBox(height: 15,),
@@ -96,6 +78,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       child: GestureDetector(
                         onTap: () {
                           print('Click Đăng kí tài khoản');
+                          Navigator.pushNamed(context, "/register");
                         },
                         child: Text(
                           'Đăng kí tài khoản',
@@ -118,4 +101,3 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 }
-
