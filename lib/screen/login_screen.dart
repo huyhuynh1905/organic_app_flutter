@@ -32,6 +32,7 @@ class _LoginScreenState extends State<LoginScreen> {
               backgroundColor: Colors.transparent,
               body: Column(
                 children: [
+                  SizedBox(height: size.height*0.035,),
                   Flexible(
                     child: Center(
                       child: Text(

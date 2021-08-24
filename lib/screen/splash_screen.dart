@@ -18,7 +18,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(statusBarColor: Colors.transparent));
-    SystemChrome.setEnabledSystemUIOverlays([SystemUiOverlay.top]);
+    //SystemChrome.setEnabledSystemUIOverlays([SystemUiOverlay.top]);
     super.initState();
     Timer(Duration(seconds: 2),()=>Navigator.pushReplacementNamed(context, "/login"));
   }
