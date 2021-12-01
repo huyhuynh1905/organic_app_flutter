@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:organic_app_flutter/const/app_colors.dart';
 import 'package:organic_app_flutter/model/language_constants.dart';
-import 'package:organic_app_flutter/mywidget/background_image.dart';
-import 'package:organic_app_flutter/mywidget/red_text_button.dart';
-import 'package:organic_app_flutter/mywidget/text_input.dart';
-import 'package:organic_app_flutter/mywidget/text_input_pass.dart';
+import 'package:organic_app_flutter/widget_utils/background_image.dart';
+import 'package:organic_app_flutter/widget_utils/red_text_button.dart';
+import 'package:organic_app_flutter/widget_utils/text_input.dart';
+import 'package:organic_app_flutter/widget_utils/text_input_pass.dart';
 import 'package:easy_localization/easy_localization.dart';
 
 class LoginScreen extends StatefulWidget {
