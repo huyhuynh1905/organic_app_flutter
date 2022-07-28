@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
-import 'package:organic_app_flutter/const/app_colors.dart';
-import 'package:organic_app_flutter/screen/login_screen.dart';
+
+import '../common/resource/app_colors.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -30,7 +30,7 @@ class _SplashScreenState extends State<SplashScreen> {
         width: double.infinity,
         height: double.infinity,
         decoration: BoxDecoration(
-          gradient: MyAppColors.bgSplashScreen
+          gradient: AppColors.bgSplashScreen
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,

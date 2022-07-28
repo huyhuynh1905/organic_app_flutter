@@ -1,4 +1,4 @@
-package com.huyhuynh.organic_app_flutter
+package com.huyhuynh.aa
 
 import io.flutter.embedding.android.FlutterActivity
 

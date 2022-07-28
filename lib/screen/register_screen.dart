@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:organic_app_flutter/widget_utils/background_image.dart';
-import 'package:organic_app_flutter/widget_utils/red_text_button.dart';
-import 'package:organic_app_flutter/widget_utils/text_input.dart';
-import 'package:organic_app_flutter/widget_utils/text_input_pass.dart';
 import 'package:easy_localization/easy_localization.dart';
+
+import '../widget_utils/background_image.dart';
+import '../widget_utils/red_text_button.dart';
+import '../widget_utils/text_input.dart';
+import '../widget_utils/text_input_pass.dart';
 
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({Key? key}) : super(key: key);

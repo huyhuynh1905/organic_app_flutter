@@ -8,13 +8,13 @@ void main() async {
   await EasyLocalization.ensureInitialized();
   runApp(
       EasyLocalization(
-        path: 'assets/langs',
-        supportedLocales: [
-          Locale('en', 'EN'),
-          Locale('vi', 'VN')
-        ],
-        fallbackLocale: Locale('vi', 'VN'),
-        child: MyApp()
+          path: 'assets/langs',
+          supportedLocales: [
+            Locale('en', 'EN'),
+            Locale('vi', 'VN')
+          ],
+          fallbackLocale: Locale('vi', 'VN'),
+          child: MyApp()
       )
   );
 }

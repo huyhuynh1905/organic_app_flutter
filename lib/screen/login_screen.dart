@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:organic_app_flutter/const/app_colors.dart';
-import 'package:organic_app_flutter/model/language_constants.dart';
-import 'package:organic_app_flutter/widget_utils/background_image.dart';
-import 'package:organic_app_flutter/widget_utils/red_text_button.dart';
-import 'package:organic_app_flutter/widget_utils/text_input.dart';
-import 'package:organic_app_flutter/widget_utils/text_input_pass.dart';
 import 'package:easy_localization/easy_localization.dart';
+
+import '../common/resource/app_colors.dart';
+import '../model/language_constants.dart';
+import '../widget_utils/background_image.dart';
+import '../widget_utils/red_text_button.dart';
+import '../widget_utils/text_input.dart';
+import '../widget_utils/text_input_pass.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -116,11 +117,11 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                   label: Text(
                     'langX'.tr(),
-                    style: TextStyle(color: MyAppColors.grey57, fontSize: 14)
+                    style: TextStyle(color: AppColors.grey57, fontSize: 14)
                   ),
                   style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all(Colors.white),
-                    overlayColor: MaterialStateProperty.all(MyAppColors.greyB8),
+                    overlayColor: MaterialStateProperty.all(AppColors.greyB8),
                     shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                       RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20)
