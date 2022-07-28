@@ -1,6 +1,5 @@
 import 'dart:async';
 
-import 'package:organic_bloc/app.dart';
 import 'package:organic_bloc/di/injection_container.dart';
 import 'package:organic_bloc/main.dart';
 import 'package:easy_localization/easy_localization.dart';
