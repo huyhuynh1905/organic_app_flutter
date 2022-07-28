@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../screen/login_screen.dart';
-import '../screen/register_screen.dart';
-import '../screen/splash_screen.dart';
+import '../presenter/login_screen.dart';
+import '../presenter/register_screen.dart';
+import '../presenter/splash_screen.dart';
 
 class RouteApp{
   static Map<String, WidgetBuilder> routeApp(BuildContext context) {

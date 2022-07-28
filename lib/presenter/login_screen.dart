@@ -3,11 +3,11 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:easy_localization/easy_localization.dart';
 
 import '../common/resource/app_colors.dart';
-import '../model/language_constants.dart';
-import '../widget_utils/background_image.dart';
-import '../widget_utils/red_text_button.dart';
-import '../widget_utils/text_input.dart';
-import '../widget_utils/text_input_pass.dart';
+import '../domain/entity/language_entity.dart';
+import 'package:organic_bloc/utils/widget_utils/background_image.dart';
+import 'package:organic_bloc/utils/widget_utils/red_text_button.dart';
+import 'package:organic_bloc/utils/widget_utils/text_input.dart';
+import 'package:organic_bloc/utils/widget_utils/text_input_pass.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -138,14 +138,14 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
   _showPopupMenuLanguage(Size size){
-    showMenu<Language>(
+    showMenu<LanguageEntity>(
       shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(10))
       ),
       context: context,
       position: RelativeRect.fromLTRB(100.0, size.height * 0.1, 0.0, 0.0),//position where you want to show the menu on screen
-      items: Language.languageList().map<PopupMenuItem<Language>>((Language value) {
-        return PopupMenuItem<Language>(
+      items: LanguageEntity.languageList().map<PopupMenuItem<LanguageEntity>>((LanguageEntity value) {
+        return PopupMenuItem<LanguageEntity>(
           value: value,
           child: Container(
               child: Row(
