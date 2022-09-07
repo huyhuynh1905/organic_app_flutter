@@ -15,3 +15,13 @@ class LocaleProvider extends ChangeNotifier {
     notifyListeners();
   }
 }
+
+class LocaleSupport{
+  static List<Locale> get supportedLocales => [
+    const Locale('vi', 'VN'),
+    const Locale('en', 'EN')
+  ];
+
+  static Locale get localeVN => supportedLocales[0];
+  static Locale get localeEN => supportedLocales[1];
+}

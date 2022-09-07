@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
+import 'package:organic_bloc/core/router/application_route.dart';
+import 'package:organic_bloc/core/router/routers.dart';
 
 import '../common/resource/app_colors.dart';
 
@@ -17,10 +19,16 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
-    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(statusBarColor: Colors.transparent));
+    SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(statusBarColor: Colors.transparent));
     //SystemChrome.setEnabledSystemUIOverlays([SystemUiOverlay.top]);
     super.initState();
-    Timer(Duration(seconds: 2),()=>Navigator.pushReplacementNamed(context, "/login"));
+    Timer(const Duration(seconds: 2),(){
+      ApplicationRoute.router?.navigateTo(
+        context,
+        Routes.signIn,
+        clearStack: true,
+      );
+    });
   }
   @override
   Widget build(BuildContext context) {
@@ -52,18 +60,18 @@ class _SplashScreenState extends State<SplashScreen> {
                 fit: BoxFit.cover,
               ),
             ),*/
-            SizedBox(height: 35,),
+            const SizedBox(height: 35,),
             Text(
               "Organic Shop",
               style: GoogleFonts.ubuntu(
-                textStyle: TextStyle(
+                textStyle: const TextStyle(
                   color: Colors.white,
                   fontSize: 26
                 )
               )
             ),
             SizedBox(height: MediaQuery.of(context).size.height/3,),
-            CircularProgressIndicator(
+            const CircularProgressIndicator(
               valueColor:  AlwaysStoppedAnimation<Color>(Colors.orange)
             ),
           ],

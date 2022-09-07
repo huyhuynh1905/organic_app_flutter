@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:easy_localization/easy_localization.dart';
+import 'package:organic_bloc/core/providers/locale_provider.dart';
+import 'package:organic_bloc/core/router/application_route.dart';
+import 'package:organic_bloc/core/router/routers.dart';
+import 'package:organic_bloc/di/injection_container.dart';
 
 import '../common/resource/app_colors.dart';
 import '../domain/entity/language_entity.dart';
@@ -85,7 +89,10 @@ class _LoginScreenState extends State<LoginScreen> {
                       child: GestureDetector(
                         onTap: () {
                           print('Click Đăng kí tài khoản');
-                          Navigator.pushNamed(context, "/register");
+                          ApplicationRoute.router?.navigateTo(
+                            context,
+                            Routes.signUp,
+                          );
                         },
                         child: Text(
                           'textRegister'.tr(),
@@ -117,7 +124,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                   label: Text(
                     'langX'.tr(),
-                    style: TextStyle(color: AppColors.grey57, fontSize: 14)
+                    style: const TextStyle(color: AppColors.grey57, fontSize: 14)
                   ),
                   style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all(Colors.white),
@@ -162,8 +169,7 @@ class _LoginScreenState extends State<LoginScreen> {
         );
       }).toList()
     ).then((value){
-      //sự kiện click
-      context.setLocale(value!.locale);
+      getIt<LocaleProvider>().setLocale(value!.locale, context);
       print('===============X : ${value.locale.languageCode}');
     });
   }

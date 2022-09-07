@@ -1,7 +1,8 @@
 import 'dart:async';
 
+import 'package:organic_bloc/app.dart';
+import 'package:organic_bloc/core/providers/locale_provider.dart';
 import 'package:organic_bloc/di/injection_container.dart';
-import 'package:organic_bloc/main.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
@@ -31,11 +32,8 @@ class AppSetup {
 
   static _runMyApp() async {
     runApp(EasyLocalization(
-        supportedLocales: const [
-          Locale('vi'),
-          Locale('en')
-        ],
-        path: 'assets/translations', //file này define mặc định để dùng đến easy_localition
+        supportedLocales: LocaleSupport.supportedLocales,
+        path: 'assets/langs', //file này define mặc định để dùng đến easy_localition
         fallbackLocale: const Locale('vi'),
         child: MyApp()),
     );
