@@ -57,6 +57,27 @@ android {
             signingConfig signingConfigs.debug
         }
     }
+    flavorDimensions 'environment'
+    productFlavors {
+        development {
+            dimension 'environment'
+            versionCode = flutterVersionCode
+            versionName flutterVersionName
+            versionNameSuffix = '-dev'
+        }
+        uat {
+            dimension 'environment'
+            versionCode = flutterVersionCode
+            versionName flutterVersionName
+            versionNameSuffix = '-uat'
+        }
+        production {
+            dimension 'environment'
+            versionCode = flutterVersionCode
+            versionName flutterVersionName
+            versionNameSuffix = '-prod'
+        }
+    }
 }
 
 flutter {
