@@ -4,10 +4,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
+import 'package:organic_bloc/common/resource/app_image.dart';
 import 'package:organic_bloc/core/router/application_route.dart';
 import 'package:organic_bloc/core/router/routers.dart';
 
-import '../common/resource/app_colors.dart';
+import '../../common/resource/app_colors.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -45,21 +46,7 @@ class _SplashScreenState extends State<SplashScreen> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             SizedBox(height: MediaQuery.of(context).size.height/7.5,),
-            Lottie.asset(
-              'assets/images/icon_splash_screen.json',
-              width: 300,
-              height: 250,
-              fit: BoxFit.cover,
-            ),
-            /*ClipRRect(
-              borderRadius: BorderRadius.circular(20),
-              child: Image.asset(
-                "assets/images/image_splash.jpg",
-                height: 150,
-                width: MediaQuery.of(context).size.width/1.2,
-                fit: BoxFit.cover,
-              ),
-            ),*/
+            AppImage.getLottieSplash(),
             const SizedBox(height: 35,),
             Text(
               "Organic Shop",

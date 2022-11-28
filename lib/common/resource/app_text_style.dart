@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:organic_bloc/utils/responsive_utils.dart';
 
 import 'app_colors.dart';
 import 'app_dimens.dart';
@@ -27,23 +28,23 @@ class AppTextStyle extends TextStyle {
           fontWeight: fontWeight);
 
   static final defaultUbuntu =
-  AppTextStyle(fontSize: Dimens.sp(13), color: Colors.black);
+  AppTextStyle(fontSize: Dimens.sp(13.r), color: Colors.black);
 
   static final s11Ubuntu =
-  AppTextStyle(fontSize: Dimens.sp(11), color: Colors.black);
+  AppTextStyle(fontSize: Dimens.sp(11.r), color: Colors.black);
 
   static final s12Ubuntu =
-  AppTextStyle(fontSize: Dimens.sp(12), color: Colors.black);
+  AppTextStyle(fontSize: Dimens.sp(12.r), color: Colors.black);
 
   static final s14Ubuntu =
-  AppTextStyle(fontSize: Dimens.sp(14), color: Colors.black);
+  AppTextStyle(fontSize: Dimens.sp(14.r), color: Colors.black);
 
   static final s15Ubuntu =
-  AppTextStyle(fontSize: Dimens.sp(15), color: Colors.black);
+  AppTextStyle(fontSize: Dimens.sp(15.r), color: Colors.black);
 
   static final s16Ubuntu =
-  AppTextStyle(fontSize: Dimens.sp(16), color: Colors.black);
+  AppTextStyle(fontSize: Dimens.sp(16.r), color: Colors.black);
 
   static final titleTextName =
-  AppTextStyle(fontSize: Dimens.sp(20), color: AppColors.grayText);
+  AppTextStyle(fontSize: Dimens.sp(20.r), color: AppColors.grayText);
 }

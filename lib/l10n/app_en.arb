@@ -1,0 +1,12 @@
+{
+  "langX" : "EN",
+  "langIcon": "assets/images/flag_en.png",
+  "textBtnLogin": "Login",
+  "textForgotPass": "Forgot password?",
+  "hintEdtPass": "Password",
+  "textRegister": "Creat new account",
+  "hintEdtName": "Name",
+  "hintEdtAddr": "Address",
+  "hintEdtRePass": "Retype password",
+  "tvHaveAccount": "Already have an account? "
+}

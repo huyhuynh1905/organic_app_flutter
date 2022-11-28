@@ -25,4 +25,8 @@ class PrefsService {
   static clearDataForLogout(){
     _prefs.remove(SharedKey.KEY_ACCESS_TOKEN);
   }
+
+  static clearDataByKey(String key){
+    _prefs.remove(key);
+  }
 }

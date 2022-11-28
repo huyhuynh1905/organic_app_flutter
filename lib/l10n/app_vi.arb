@@ -1,0 +1,12 @@
+{
+  "langX" : "VN",
+  "langIcon": "assets/images/flag_vi.png",
+  "textBtnLogin": "Đăng nhập",
+  "textForgotPass": "Quên mật khẩu?",
+  "hintEdtPass": "Mật khẩu",
+  "textRegister": "Đăng kí tài khoản",
+  "hintEdtName": "Tên người dùng",
+  "hintEdtAddr": "Địa chỉ",
+  "hintEdtRePass": "Nhập lại mật khẩu",
+  "tvHaveAccount": "Đã có tài khoản? "
+}

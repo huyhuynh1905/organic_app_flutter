@@ -1,6 +1,7 @@
 # aa
 
 A new Flutter project.
+App chạy trên Flutter 2.10.5
 
 ## Getting Started
 
@@ -14,3 +15,14 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+##Note Localization:
+Trong pubspec.yaml:
+`
+flutter:
+generate: true
+`
+Lệnh gen: `flutter gen-l10n`
+Có thể vào: Dart Analysis -> Icon (Restart Dart Analysis Server)
+
+---

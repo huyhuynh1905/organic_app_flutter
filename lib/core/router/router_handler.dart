@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:fluro/fluro.dart';
-import 'package:organic_bloc/presenter/login_screen.dart';
-import 'package:organic_bloc/presenter/register_screen.dart';
-import 'package:organic_bloc/presenter/splash_screen.dart';
+import 'package:organic_bloc/presenter/login/login_screen.dart';
+import 'package:organic_bloc/presenter/register/register_screen.dart';
+import 'package:organic_bloc/presenter/splash/splash_screen.dart';
 
 Handler notHandler = Handler(
   handlerFunc: (context, Map<String, List<String>> params) => Scaffold(

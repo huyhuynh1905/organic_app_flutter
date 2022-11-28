@@ -1,10 +1,11 @@
+import 'package:organic_bloc/common/resource/app_image.dart';
+import 'package:organic_bloc/utils/localization_extension.dart';
 import 'package:organic_bloc/utils/widget_utils/background_image.dart';
 import 'package:organic_bloc/utils/widget_utils/red_text_button.dart';
 import 'package:organic_bloc/utils/widget_utils/text_input.dart';
 import 'package:organic_bloc/utils/widget_utils/text_input_pass.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:easy_localization/easy_localization.dart';
 
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({Key? key}) : super(key: key);
@@ -23,7 +24,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
         width: double.infinity,
         child: Stack(
           children: [
-            BackgroundWidget(pathImage: "assets/images/image_register_bg.jpg",),
+            BackgroundWidget(
+              imageProvider: AppImage.getImgPvdRegisterBgk(),
+            ),
             Scaffold(
               backgroundColor: Colors.transparent,
               body: SingleChildScrollView(
@@ -32,7 +35,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     SizedBox(height: size.height * 0.1,),
                     Center(
                       child: Text(
-                        'textRegister'.tr(),
+                        context.locale!.textRegister,
                         style: GoogleFonts.lobster(
                           color: Colors.white,
                           fontSize: 30
@@ -42,7 +45,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     SizedBox(height: size.height * 0.1,),
                     TextFieldEmail(
                       iconData: Icons.account_circle_rounded,
-                      hintText: 'hintEdtName'.tr(),
+                      hintText: context.locale!.hintEdtName,
                     ),
                     SizedBox(height: size.height * 0.02,),
                     TextFieldEmail(
@@ -52,24 +55,24 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     SizedBox(height: size.height * 0.02,),
                     TextFieldEmail(
                       iconData: Icons.home_outlined,
-                      hintText: 'hintEdtAddr'.tr(),
+                      hintText: context.locale!.hintEdtAddr,
                     ),
                     SizedBox(height: size.height * 0.02,),
                     TextFieldPassword(
                       iconData: Icons.lock_outline,
-                      hintText: 'hintEdtPass'.tr(),
+                      hintText: context.locale!.hintEdtPass,
                     ),
                     SizedBox(height: size.height * 0.02,),
                     TextFieldPassword(
                       iconData: Icons.lock_outline,
-                      hintText: 'hintEdtRePass'.tr(),
+                      hintText: context.locale!.hintEdtRePass,
                     ),
                     SizedBox(height: size.height *0.03,),
                     RedTextButton(
                       radius: 10,
                       widthButton: size.width/1.1,
                       heightButton: 60,
-                      tittle: 'textRegister'.tr(),
+                      tittle: context.locale!.textRegister,
                     ),
                     SizedBox(height: size.height *0.03,),
                     Container(
@@ -78,7 +81,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
-                            'tvHaveAccount'.tr(),
+                            context.locale!.textRegister,
                             style: GoogleFonts.mulish(
                               color: Colors.white,
                               fontSize: 16
@@ -90,7 +93,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                               Navigator.pop(context);
                             },
                             child: Text(
-                              'textBtnLogin'.tr(),
+                              context.locale!.textBtnLogin,
                               style: GoogleFonts.mulish(
                                 color: Colors.red,
                                 fontSize: 16

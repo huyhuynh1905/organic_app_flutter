@@ -11,5 +11,13 @@ class StorageManager{
     return isDarkThemes;
   }
 
+  static void setIsVietNamese(bool isVN){
+    PrefsService.setIsData(SharedKey.KEY_LOCALE, isVN);
+  }
+  static Future<bool?> isVietNamese() async {
+    final isVN = await PrefsService.isData(SharedKey.KEY_LOCALE);
+    return isVN;
+  }
+
 
 }

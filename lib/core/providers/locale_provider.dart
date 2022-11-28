@@ -1,27 +1,36 @@
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:organic_bloc/data/local/export_data_local.dart';
+import 'package:organic_bloc/data/local/shared/shared_key.dart';
+import 'package:organic_bloc/data/local/shared/shared_preferences_service.dart';
 
 class LocaleProvider extends ChangeNotifier {
-  Locale? _locale;
+  Locale? _locale = AppLocalizations.supportedLocales[0];
   get locale => _locale;
 
-  setLocale(Locale value, BuildContext context){
+  setLocale(Locale value){
     _locale = value;
-    EasyLocalization.of(context)?.setLocale(value);
+    if(value == LocaleSupport.localeVN){
+      StorageManager.setIsVietNamese(true);
+    } else {
+      StorageManager.setIsVietNamese(false);
+    }
     notifyListeners();
   }
+
+  getLocale() async {
+    final isVN = await StorageManager.isVietNamese() ?? false;
+    return isVN;
+  }
+
   clearLocale(){
     _locale = null;
+    PrefsService.clearDataByKey(SharedKey.KEY_LOCALE);
     notifyListeners();
   }
 }
 
 class LocaleSupport{
-  static List<Locale> get supportedLocales => [
-    const Locale('vi', 'VN'),
-    const Locale('en', 'EN')
-  ];
-
-  static Locale get localeVN => supportedLocales[0];
-  static Locale get localeEN => supportedLocales[1];
+  static Locale get localeVN => AppLocalizations.supportedLocales[1];
+  static Locale get localeEN => AppLocalizations.supportedLocales[0];
 }

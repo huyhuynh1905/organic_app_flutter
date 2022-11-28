@@ -3,15 +3,15 @@ import 'package:flutter/material.dart';
 class BackgroundWidget extends StatelessWidget {
   const BackgroundWidget({
     Key? key,
-    required this.pathImage
+    required this.imageProvider
   }) : super(key: key);
 
-  final String pathImage;
+  final ImageProvider imageProvider;
 
   @override
   Widget build(BuildContext context) {
     return ShaderMask(
-      shaderCallback: (rect) => LinearGradient(
+      shaderCallback: (rect) => const LinearGradient(
           begin: Alignment.bottomCenter,
           end: Alignment.center,
           colors: [
@@ -23,9 +23,9 @@ class BackgroundWidget extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
             image: DecorationImage(
-                image: AssetImage(pathImage),
+                image: imageProvider,
                 fit: BoxFit.cover,
-                colorFilter: ColorFilter.mode(Colors.black54, BlendMode.darken)
+                colorFilter: const ColorFilter.mode(Colors.black54, BlendMode.darken)
             )
         ),
       ),
