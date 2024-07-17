@@ -1,7 +1,7 @@
 # aa
 
 A new Flutter project.
-App chạy trên Flutter 2.10.5
+App chạy trên Flutter 3.22.0
 
 ## Getting Started
 
