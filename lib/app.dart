@@ -11,8 +11,8 @@ import 'package:organic_bloc/di/injection_container.dart';
 import 'package:organic_bloc/utils/localization_extension.dart';
 import 'package:organic_bloc/utils/responsive_utils.dart';
 import 'package:provider/provider.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'core/blocs/app_bloc.dart';
+import 'package:organic_bloc/l10n/app_localizations.dart';
 import 'core/blocs/app_event.dart';
 
 class MyApp extends StatelessWidget {

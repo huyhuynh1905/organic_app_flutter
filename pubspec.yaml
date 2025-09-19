@@ -15,49 +15,53 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   #ui
-  flutter_svg: ^2.0.10+1
-  cached_network_image: ^3.3.1
+  flutter_svg: ^2.2.1
+  cached_network_image: ^3.4.1
 
   #injection:
-  get_it: ^7.7.0
+  get_it: ^8.2.0
 
   #data:
-  shared_preferences: ^2.2.3
+  shared_preferences: ^2.5.3
 
   #state management:
-  flutter_bloc: ^8.1.6
-  provider: ^6.1.2
+  flutter_bloc: ^9.1.1
+  provider: ^6.1.5+1
 
   #model:
-  equatable: ^2.0.5
+  equatable: ^2.0.7
 
   #api:
-  dio: ^5.5.0+1
-  retrofit: '>=4.0.0 <5.0.0'
+  dio: ^5.9.0
+  retrofit: ^4.6.0
   logger: any  #for logging purpose
 
   #navigator:
   fluro: ^2.0.5
 
 
-  lottie: ^3.1.2
-  google_fonts: ^6.2.0
-  json_annotation: ^4.8.1
-  package_info_plus: ^5.0.1
+  lottie: ^3.3.0
+  google_fonts: ^6.3.1
+  json_annotation: ^4.9.0
+  package_info_plus: ^9.0.0
 
   # Change language app
-  intl: ^0.19.0
+  intl: ^0.20.2
 
   cupertino_icons: ^1.0.8
+
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^1.0.0
 
-  build_runner: '>=2.3.0 <4.0.0'
-  json_serializable: ^6.6.2
-  retrofit_generator: '>=7.0.0 <8.0.0'
+  retrofit_generator: ^10.0.1
+  build_runner: ^2.6.0
+  json_serializable: ^6.10.0
+
+dependency_overrides:
+  archive: ^4.0.7 #fix lỗi 1 thư viện còn dùng ver cũ
 
 flutter:
   generate: true
@@ -91,3 +95,5 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+flutter_intl:
+  enabled: true

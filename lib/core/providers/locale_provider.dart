@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:organic_bloc/l10n/app_localizations.dart';
 import 'package:organic_bloc/data/local/export_data_local.dart';
-import 'package:organic_bloc/data/local/shared/shared_key.dart';
-import 'package:organic_bloc/data/local/shared/shared_preferences_service.dart';
 
 class LocaleProvider extends ChangeNotifier {
   Locale? _locale = AppLocalizations.supportedLocales[0];
